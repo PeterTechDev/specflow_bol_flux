@@ -85,7 +85,7 @@ namespace CreateBolFlow.Features.Rubicon
         [Xunit.TraitAttribute("Description", "Successfully transfer LRB and update BOL status to \'in transit\'")]
         [Xunit.TraitAttribute("Category", "TestCaseKey=PSP-T25")]
         [Xunit.TraitAttribute("Category", "SearchBOLCodeandTransferLRB")]
-        [Xunit.InlineDataAttribute("MNST-GALV-GUST-607-1", new string[0])]
+        [Xunit.InlineDataAttribute("MNST-GALV-GUST-641-1", new string[0])]
         public void SuccessfullyTransferLRBAndUpdateBOLStatusToInTransit(string bOLCode, string[] exampleTags)
         {
             string[] @__tags = new string[] {

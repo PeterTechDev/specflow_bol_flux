@@ -24,8 +24,8 @@ namespace CreateBolFlow.StepDefinitions.Hero
             wait = fixture.Wait;
         }
 
-        [Given(@"the user is logged into Rubicon with username '([^']*)' and password '([^']*)'")]
-        public void GivenTheUserIsLoggedIntoRubiconWithUsernameAndPassword(string userName, string password)
+        [Given(@"the user is logged into Hero with username '([^']*)' and password '([^']*)'")]
+        public void GivenTheUserIsLoggedIntoRubiconWithUsernameAndPassword(string username, string password)
         {
             driver.Navigate().GoToUrl("http://172.16.20.27:5422/Account/Login");
             wait.Until(d => d.FindElement(By.Name("UsernameOrEmailAddress")).Displayed);
@@ -33,7 +33,7 @@ namespace CreateBolFlow.StepDefinitions.Hero
             var usernameField = driver.FindElement(By.Name("UsernameOrEmailAddress"));
             var passwordField = driver.FindElement(By.Name("Password"));
 
-            usernameField.SendKeys($"{userName}");
+            usernameField.SendKeys($"{username}");
             passwordField.SendKeys($"{password}");
 
             var submitButton = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.Id("hero-login-button")));

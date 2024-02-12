@@ -3,8 +3,7 @@
 
     @NavigateToBOLsList
     Scenario: Navigate to BOL List in Hero System
-        Given the user is logged into Rubicon with username 'psouza' and password 'Wtec123!'
-        And the user is on the Hero home page
+        Given the user is logged into Hero with username 'psouza' and password 'Wtec123!'
         When the user clicks on the main menu
         And the user selects the 'WTEC' option
         And the user clicks on the 'Steel' option

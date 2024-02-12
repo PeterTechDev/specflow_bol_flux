@@ -54,7 +54,7 @@ namespace CreateBolFlow.StepDefinitions.Rubicon
             bool statusMatch = false;
             int attempts = 0;
 
-            while (!statusMatch && attempts < 4)
+            while (!statusMatch && attempts < 10)
             {
                 var heroSyncedStatusDt = driver.FindElement(By.XPath($"//dt[contains(text(), '{heroSyncStatus}')]"));
                 var heroSyncedStatusDd = heroSyncedStatusDt.FindElement(By.XPath("following-sibling::dd"));

@@ -8,6 +8,9 @@
 
   <ItemGroup>
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\Login - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\NavigateToBolList - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\SearchBOL - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\VerifyStatusesBeforeAction - Copy.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\RubiconCreateBOL - Copy.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\RubiconUserAuthentication - Copy.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\RubiconUserLogin - Copy.feature.cs" />
@@ -36,8 +39,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Features\Hero\NavigateToBolList.feature.cs">
-      <DependentUpon>NavigateToBolList.feature</DependentUpon>
+    <Compile Update="Features\Hero\3.ShipBolProcess.feature.cs">
+      <DependentUpon>3.ShipBolProcess.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Hero\2.NavigateToBolList.feature.cs">
+      <DependentUpon>2.NavigateToBolList.feature</DependentUpon>
     </Compile>
     <Compile Update="Features\Rubicon\Rubicon_TransferLRBfromBOL.feature.cs">
       <DependentUpon>Rubicon_TransferLRBfromBOL.feature</DependentUpon>
@@ -57,7 +63,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <SpecFlowFeatureFiles Update="Features\Hero\NavigateToBolList.feature">
+    <SpecFlowFeatureFiles Update="Features\Hero\3.ShipBolProcess.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\2.NavigateToBolList.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\ShipToCoatApplicatorAndInspection.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\VerifyStatusesBeforeAction.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\SearchBOL.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
