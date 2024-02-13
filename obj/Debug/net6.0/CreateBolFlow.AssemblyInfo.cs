@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CreateBolFlow")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4af8541ca2f008737df13da25e137fd01a1c99f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f4ee391cb133b28b463d65c557e018e216fb634")]
 [assembly: System.Reflection.AssemblyProductAttribute("CreateBolFlow")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CreateBolFlow")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

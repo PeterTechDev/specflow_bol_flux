@@ -145,27 +145,30 @@ this.FeatureBackground();
     testRunner.When(string.Format("the user enters \"{0}\" into the search field", bolNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 17
-    testRunner.When("the user selects the BOL and click in the button \"Ship to Coating Applicator\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("the user clicks in the Select button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 18
-    testRunner.And("the user enters a valid LRB number \"19446445\" and adds it to the BOL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("the user clicks in the button \"Ship to Coating Applicator\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
-    testRunner.And("the user attaches image files for inspection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("the user enters a valid LRB number \"19446445\" and adds it to the BOL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
-    testRunner.And("the user clicks on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("the user attaches image files for inspection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 21
-    testRunner.Then(string.Format("the Rubicon status should be \"{0}\"", rubiconStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.And("the user clicks on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 22
-    testRunner.And(string.Format("the Hero Status should be \"{0}\"", heroStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.Then(string.Format("the Rubicon status should be \"{0}\"", rubiconStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 23
-    testRunner.And(string.Format("the QC Inspection status should be \"{0}\"", qcStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And(string.Format("the Hero Status should be \"{0}\"", heroStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 24
+    testRunner.And(string.Format("the QC Inspection status should be \"{0}\"", qcStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 25
     testRunner.And(string.Format("the Shipping Inspection status should be \"{0}\"", shippingStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

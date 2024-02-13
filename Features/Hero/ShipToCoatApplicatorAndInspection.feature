@@ -14,7 +14,8 @@ Background:
 Scenario: Shipping to Coating Applicator and Inspection Verification
         
     When the user enters "<bolNumber>" into the search field
-    When the user selects the BOL and click in the button "Ship to Coating Applicator"
+    When the user clicks in the Select button
+    And the user clicks in the button "Ship to Coating Applicator"
     And the user enters a valid LRB number "19446445" and adds it to the BOL
     And the user attaches image files for inspection
     And the user clicks on Save button

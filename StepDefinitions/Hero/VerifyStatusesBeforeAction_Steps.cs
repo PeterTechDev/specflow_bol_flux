@@ -29,7 +29,7 @@ namespace CreateBolFlow.StepDefinitions.Hero
         [Then(@"the Rubicon status should be ""([^""]*)""")]
         public void ThenTheRubiconStatusShouldBe(string rubiconExpectedStatus)
         {
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
             IWebElement rubiconStatus = wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#hero-next-datagrid > div > div.dx-datagrid-rowsview.dx-datagrid-nowrap.dx-last-row-border.dx-scrollable.dx-visibility-change-handler.dx-scrollable-both.dx-scrollable-simulated > div > div > div.dx-scrollable-content > div > table > tbody > tr.dx-row.dx-data-row.dx-row-lines.dx-column-lines > td:nth-child(5)")));
             Assert.Equal(rubiconExpectedStatus, rubiconStatus.Text);
         }

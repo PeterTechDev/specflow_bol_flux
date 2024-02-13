@@ -21,5 +21,5 @@ Scenario: Verify Statuses Before Action
     And the Shipping Inspection status should be "<shippingStatus>"
 
     Examples:
-    | bolNumber            | rubiconStatus | heroStatus                       | qcStatus  | shippingStatus |
-    | MNST-GALV-GUST-604-1 | In Transit    | LRBs Assigned                  | Pending   | Pending      |
+    | bolNumber            | rubiconStatus | heroStatus    | qcStatus  | shippingStatus |
+    | MNST-GALV-GUST-604-1 | In Transit    | LRBs Assigned | Pending   | Pending        |

@@ -78,14 +78,14 @@ namespace CreateBolFlow.StepDefinitions.Hero
             var manufactoringMenuItem = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath($"//span[text()='{manufactoringMenu}']")));
             manufactoringMenuItem.Click();
 
-
+            Thread.Sleep(500);
             var bolMenuItem = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath($"//span[text()='{bolMenu}']")));
             bolMenuItem.Click();
 
+            Thread.Sleep(500);
             var listMenuItem = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath($"//span[text()='{listMenu}']")));
             listMenuItem.Click();
         }
-
 
         [Then(@"the BOL list page is displayed")]
         public void ThenTheBOLListPageIsDisplayed()
