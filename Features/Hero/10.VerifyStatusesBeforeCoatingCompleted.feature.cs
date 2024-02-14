@@ -19,7 +19,7 @@ namespace CreateBolFlow.Features.Hero
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class _7_GalvanizerReceivingFeature : object, Xunit.IClassFixture<_7_GalvanizerReceivingFeature.FixtureData>, System.IDisposable
+    public partial class _10_VerifyStatuses_BeforeCoatingCompletedFeature : object, Xunit.IClassFixture<_10_VerifyStatuses_BeforeCoatingCompletedFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace CreateBolFlow.Features.Hero
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "7.GalvanizerReceiving.feature"
+#line 1 "10.VerifyStatusesBeforeCoatingCompleted.feature"
 #line hidden
         
-        public _7_GalvanizerReceivingFeature(_7_GalvanizerReceivingFeature.FixtureData fixtureData, CreateBolFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public _10_VerifyStatuses_BeforeCoatingCompletedFeature(_10_VerifyStatuses_BeforeCoatingCompletedFeature.FixtureData fixtureData, CreateBolFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace CreateBolFlow.Features.Hero
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Hero", "7. Galvanizer Receiving", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Hero", "10. Verify Statuses - Before Coating Completed", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -107,28 +107,27 @@ namespace CreateBolFlow.Features.Hero
             this.TestTearDown();
         }
         
-        [Xunit.SkippableTheoryAttribute(DisplayName="7. Galvanizer Receiving")]
-        [Xunit.TraitAttribute("FeatureTitle", "7. Galvanizer Receiving")]
-        [Xunit.TraitAttribute("Description", "7. Galvanizer Receiving")]
-        [Xunit.TraitAttribute("Category", "TestCaseKey=PSP-T34")]
-        [Xunit.InlineDataAttribute("MNST-GALV-GUST-648-1", "123", "02/14/2024", "10", "Receive", "BOL received", new string[0])]
-        public void _7_GalvanizerReceiving(string bolCode, string internalJobNumber, string completionDate, string piecesReceived, string pageTitle, string sucessMessage, string[] exampleTags)
+        [Xunit.SkippableTheoryAttribute(DisplayName="10. Verify Statuses - Before Coating Completed")]
+        [Xunit.TraitAttribute("FeatureTitle", "10. Verify Statuses - Before Coating Completed")]
+        [Xunit.TraitAttribute("Description", "10. Verify Statuses - Before Coating Completed")]
+        [Xunit.TraitAttribute("Category", "TestCaseKey=PSP-T37")]
+        [Xunit.InlineDataAttribute("MNST-GALV-GUST-651-1", "At Coating Applicator", "Coating in Progress", "Pending", "Passed", new string[0])]
+        public void _10_VerifyStatuses_BeforeCoatingCompleted(string bolNumber, string rubiconStatus, string heroStatus, string qcStatus, string shippingStatus, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "TestCaseKey=PSP-T34"};
+                    "TestCaseKey=PSP-T37"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("bolCode", bolCode);
-            argumentsOfScenario.Add("internalJobNumber", internalJobNumber);
-            argumentsOfScenario.Add("completionDate", completionDate);
-            argumentsOfScenario.Add("piecesReceived", piecesReceived);
-            argumentsOfScenario.Add("pageTitle", pageTitle);
-            argumentsOfScenario.Add("sucessMessage", sucessMessage);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("7. Galvanizer Receiving", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            argumentsOfScenario.Add("bolNumber", bolNumber);
+            argumentsOfScenario.Add("rubiconStatus", rubiconStatus);
+            argumentsOfScenario.Add("heroStatus", heroStatus);
+            argumentsOfScenario.Add("qcStatus", qcStatus);
+            argumentsOfScenario.Add("shippingStatus", shippingStatus);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("10. Verify Statuses - Before Coating Completed", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 13
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -143,34 +142,22 @@ namespace CreateBolFlow.Features.Hero
     this.FeatureBackground();
 #line hidden
 #line 15
-        testRunner.When(string.Format("the user enters \"{0}\" into the search field", bolCode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.When(string.Format("the user enters \"{0}\" into the search field", bolNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 16
-        testRunner.And("the user clicks in the Select button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.Then(string.Format("\"{0}\" should be displayed in the search results", bolNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 17
-        testRunner.And("the user clicks in the button \"Receive\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.Then(string.Format("the Rubicon status should be \"{0}\"", rubiconStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 18
-        testRunner.Then(string.Format("the \"{0}\" page for \"{1}\" is displayed", pageTitle, bolCode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.And(string.Format("the Hero Status should be \"{0}\"", heroStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
-        testRunner.And(string.Format("the user fills in a valid Internal job number \"{0}\"", internalJobNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And(string.Format("the QC Inspection status should be \"{0}\"", qcStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
-        testRunner.And(string.Format("the user enters a valid estimated coating completion date \"{0}\"", completionDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 21
-        testRunner.And(string.Format("the user fills in the pieces received number \"{0}\"", piecesReceived), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 22
-        testRunner.And("the user attaches a signed BOL picture", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 23
-        testRunner.And("the user clicks on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 24
-        testRunner.Then(string.Format("the message \"{0}\" is displayed", sucessMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.And(string.Format("the Shipping Inspection status should be \"{0}\"", shippingStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -183,12 +170,12 @@ namespace CreateBolFlow.Features.Hero
             
             public FixtureData()
             {
-                _7_GalvanizerReceivingFeature.FeatureSetup();
+                _10_VerifyStatuses_BeforeCoatingCompletedFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                _7_GalvanizerReceivingFeature.FeatureTearDown();
+                _10_VerifyStatuses_BeforeCoatingCompletedFeature.FeatureTearDown();
             }
         }
     }

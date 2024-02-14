@@ -17,7 +17,7 @@ Scenario: 5. Ship to Coating Applicator Inspection
     And the user clicks in the button "Ship to Coating Applicator"
     And the user enters a valid LRB number "<lrbNumber>" and adds it to the BOL
     And the user attaches image files for inspection
-    And the user clicks on Save button
+    Then the user clicks on Save button
     Then message "Pre-Departure Inspection was marked as Passed" is displayed
 
         Examples: 

@@ -26,15 +26,15 @@ namespace CreateBolFlow.StepDefinitions.Hero
             wait = fixture.Wait;
         }
 
-        [Then(@"the Receive page for ""([^""]*)"" is displayed")]
-        public void ThenTheReceivePageForIsDisplayed(string bolNumber)
+        [Then(@"the ""([^""]*)"" page for ""([^""]*)"" is displayed")]
+        public void ThenTheReceivePageForIsDisplayed(string pageTitle, string bolNumber)
         {
             var receivePage = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.
-                ElementIsVisible(By.XPath($"//div[contains(text(), 'Receive - BOL #: {bolNumber}')]")));
+                ElementIsVisible(By.XPath($"//div[contains(text(), '{pageTitle} - BOL #: {bolNumber}')]")));
             Assert.True(receivePage.Displayed);
         }
 
-        [When(@"the user fills in a valid Internal job number ""([^""]*)""")]
+        [Then(@"the user fills in a valid Internal job number ""([^""]*)""")]
         public void WhenTheUserFillsInAValidInternalJobNumber(string internalJobNumber)
         {
             var internalJobNumberinput = driver.FindElement(By.CssSelector("input[name='InternalJobNumber']"));
@@ -42,7 +42,7 @@ namespace CreateBolFlow.StepDefinitions.Hero
             internalJobNumberinput.SendKeys(internalJobNumber);
         }
 
-        [When(@"the user enters a valid estimated coating completion date ""([^""]*)""")]
+        [Then(@"the user enters a valid estimated coating completion date ""([^""]*)""")]
         public void WhenTheUserEntersAValidEstimatedCoatingCompletionDate(string completionDate)
         {
             var dateInput = driver.FindElement(By.CssSelector("#EstimatedCoatingCompletionDate .dx-texteditor-input"));
@@ -51,7 +51,7 @@ namespace CreateBolFlow.StepDefinitions.Hero
 
         }
 
-        [When(@"the user fills in the pieces received number ""([^""]*)""")]
+        [Then(@"the user fills in the pieces received number ""([^""]*)""")]
         public void WhenTheUserFillsInThePiecesReceivedNumber(string piecesReceived)
         {
             var piecesReceivedTd = driver.FindElement(By.
@@ -63,7 +63,7 @@ namespace CreateBolFlow.StepDefinitions.Hero
         }
 
 
-        [When(@"the user attaches a signed BOL picture")]
+        [Then(@"the user attaches a signed BOL picture")]
         public void WhenTheUserAttachesASignedBOLPicture()
         {
             var signedBolPictureInput = driver.FindElement(By.CssSelector("input[type='file'][id='fileType6']"));

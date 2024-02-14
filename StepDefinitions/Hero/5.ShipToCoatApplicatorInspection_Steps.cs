@@ -113,7 +113,7 @@ namespace CreateBolFlow.StepDefinitions.Hero
             signedPackingSlip.SendKeys(filePath);
         }
 
-        [When(@"the user clicks on Save button")]
+        [Then(@"the user clicks on Save button")]
         public void WhenTheUserClicksOnSaveButton()
         {
             //need to be that way to avoid misteryous error 500 when clicking the save button

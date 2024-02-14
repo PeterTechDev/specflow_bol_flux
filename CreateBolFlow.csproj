@@ -9,6 +9,7 @@
   <ItemGroup>
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\4 - Copy.VerifyStatusesLRBTrasnferred.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\6 - Copy.VerifyStatusesPreDepartureToGalvanizer.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\8 - Copy.VerifyStatusesAfterGAlvanizerReceiving.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\Login - Copy.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\NavigateToBolList - Copy.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\SearchBOL - Copy.feature.cs" />
@@ -53,6 +54,15 @@
     <Compile Update="Features\Hero\7.GalvanizerReceiving.feature.cs">
       <DependentUpon>7.GalvanizerReceiving.feature</DependentUpon>
     </Compile>
+    <Compile Update="Features\Hero\10.VerifyStatusesBeforeCoatingCompleted.feature.cs">
+      <DependentUpon>10.VerifyStatusesBeforeCoatingCompleted.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Hero\11.CompleteCoating.feature.cs">
+      <DependentUpon>11.CompleteCoating.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Hero\09.StartCoatingInProgress.feature.cs">
+      <DependentUpon>09.StartCoatingInProgress.feature</DependentUpon>
+    </Compile>
     <Compile Update="Features\Hero\8.VerifyStatusesAfterGAlvanizerReceiving.feature.cs">
       <DependentUpon>8.VerifyStatusesAfterGAlvanizerReceiving.feature</DependentUpon>
     </Compile>
@@ -87,6 +97,18 @@
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\Hero\7.GalvanizerReceiving.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\10.VerifyStatusesBeforeCoatingCompleted.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\11.CompleteCoating.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\09.StartCoatingInProgress.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>

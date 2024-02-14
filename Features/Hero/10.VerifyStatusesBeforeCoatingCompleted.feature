@@ -1,4 +1,4 @@
-﻿Feature: 8. Verify Statuses - After Galvanizer Receiving
+﻿Feature: 10. Verify Statuses - Before Coating Completed
 
     Background:
         Given the user is logged into Hero with username 'psouza' and password 'Wtec123!'
@@ -9,8 +9,8 @@
         And the user navigates through 'Manufacturing', 'Bill of Lading', to 'List'
         Then the BOL list page is displayed
 
-    @TestCaseKey=PSP-T35
-    Scenario: 8. Verify Statuses - After Galvanizer Receiving
+    @TestCaseKey=PSP-T37
+    Scenario Outline: 10. Verify Statuses - Before Coating Completed
         
         When the user enters "<bolNumber>" into the search field
         Then "<bolNumber>" should be displayed in the search results
@@ -18,8 +18,8 @@
         And the Hero Status should be "<heroStatus>"
         And the QC Inspection status should be "<qcStatus>"
         And the Shipping Inspection status should be "<shippingStatus>"
-
-
-        Examples:
+        
+        
+                Examples:
 | bolNumber            | rubiconStatus         | heroStatus            | qcStatus | shippingStatus |
-| MNST-GALV-GUST-600-1 | At Coating Applicator | At Coating Applicator | Pending  | Passed         |
+| MNST-GALV-GUST-651-1 | At Coating Applicator | Coating in Progress   | Pending  | Passed         |

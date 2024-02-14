@@ -111,7 +111,7 @@ namespace CreateBolFlow.Features.Hero
         [Xunit.TraitAttribute("FeatureTitle", "8. Verify Statuses - After Galvanizer Receiving")]
         [Xunit.TraitAttribute("Description", "8. Verify Statuses - After Galvanizer Receiving")]
         [Xunit.TraitAttribute("Category", "TestCaseKey=PSP-T35")]
-        [Xunit.InlineDataAttribute("MNST-GALV-GUST-649-1", "at Coating Applicator", "at Coating Applicator", "Pending", "Passed", new string[0])]
+        [Xunit.InlineDataAttribute("MNST-GALV-GUST-600-1", "At Coating Applicator", "At Coating Applicator", "Pending", "Passed", new string[0])]
         public void _8_VerifyStatuses_AfterGalvanizerReceiving(string bolNumber, string rubiconStatus, string heroStatus, string qcStatus, string shippingStatus, string[] exampleTags)
         {
             string[] @__tags = new string[] {

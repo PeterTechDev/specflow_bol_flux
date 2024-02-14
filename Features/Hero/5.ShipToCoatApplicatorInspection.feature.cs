@@ -111,7 +111,7 @@ namespace CreateBolFlow.Features.Hero
         [Xunit.TraitAttribute("FeatureTitle", "5. Ship to Coating Applicator Inspection")]
         [Xunit.TraitAttribute("Description", "5. Ship to Coating Applicator Inspection")]
         [Xunit.TraitAttribute("Category", "TestCaseKey=PSP-T32")]
-        [Xunit.InlineDataAttribute("MNST-GALV-GUST-651-1", "19445983", new string[0])]
+        [Xunit.InlineDataAttribute("MNST-GALV-GUST-650-1", "19445985", new string[0])]
         public void _5_ShipToCoatingApplicatorInspection(string bolNumber, string lrbNumber, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -154,7 +154,7 @@ this.FeatureBackground();
     testRunner.And("the user attaches image files for inspection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
-    testRunner.And("the user clicks on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.Then("the user clicks on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 21
     testRunner.Then("message \"Pre-Departure Inspection was marked as Passed\" is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
