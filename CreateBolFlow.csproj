@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\4 - Copy.VerifyStatusesLRBTrasnferred.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\6 - Copy.VerifyStatusesPreDepartureToGalvanizer.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\Login - Copy.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\NavigateToBolList - Copy.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\SearchBOL - Copy.feature.cs" />
@@ -45,6 +47,15 @@
     <Compile Update="Features\Hero\2.NavigateToBolList.feature.cs">
       <DependentUpon>2.NavigateToBolList.feature</DependentUpon>
     </Compile>
+    <Compile Update="Features\Hero\6.VerifyStatusesPreDepartureToGalvanizer.feature.cs">
+      <DependentUpon>6.VerifyStatusesPreDepartureToGalvanizer.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Hero\7.GalvanizerReceiving.feature.cs">
+      <DependentUpon>7.GalvanizerReceiving.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Hero\8.VerifyStatusesAfterGAlvanizerReceiving.feature.cs">
+      <DependentUpon>8.VerifyStatusesAfterGAlvanizerReceiving.feature</DependentUpon>
+    </Compile>
     <Compile Update="Features\Rubicon\Rubicon_TransferLRBfromBOL.feature.cs">
       <DependentUpon>Rubicon_TransferLRBfromBOL.feature</DependentUpon>
     </Compile>
@@ -71,15 +82,27 @@
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="Features\Hero\ShipToCoatApplicatorAndInspection.feature">
+    <SpecFlowFeatureFiles Update="Features\Hero\6.VerifyStatusesPreDepartureToGalvanizer.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="Features\Hero\VerifyStatusesBeforeAction.feature">
+    <SpecFlowFeatureFiles Update="Features\Hero\7.GalvanizerReceiving.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="Features\Hero\SearchBOL.feature">
+    <SpecFlowFeatureFiles Update="Features\Hero\8.VerifyStatusesAfterGAlvanizerReceiving.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\5.ShipToCoatApplicatorInspection.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\4.VerifyStatusesLRBTrasnferred.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\3.SearchBOL.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>

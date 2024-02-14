@@ -19,7 +19,7 @@ namespace CreateBolFlow.Features.Hero
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class ShippingToCoatingApplicatorAndInspectionVerificationFeature : object, Xunit.IClassFixture<ShippingToCoatingApplicatorAndInspectionVerificationFeature.FixtureData>, System.IDisposable
+    public partial class _5_ShipToCoatingApplicatorInspectionFeature : object, Xunit.IClassFixture<_5_ShipToCoatingApplicatorInspectionFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace CreateBolFlow.Features.Hero
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "ShipToCoatApplicatorAndInspection.feature"
+#line 1 "5.ShipToCoatApplicatorInspection.feature"
 #line hidden
         
-        public ShippingToCoatingApplicatorAndInspectionVerificationFeature(ShippingToCoatingApplicatorAndInspectionVerificationFeature.FixtureData fixtureData, CreateBolFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public _5_ShipToCoatingApplicatorInspectionFeature(_5_ShipToCoatingApplicatorInspectionFeature.FixtureData fixtureData, CreateBolFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace CreateBolFlow.Features.Hero
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Hero", "Shipping to Coating Applicator and Inspection Verification", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Hero", "5. Ship to Coating Applicator Inspection", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -107,12 +107,12 @@ namespace CreateBolFlow.Features.Hero
             this.TestTearDown();
         }
         
-        [Xunit.SkippableTheoryAttribute(DisplayName="Shipping to Coating Applicator and Inspection Verification")]
-        [Xunit.TraitAttribute("FeatureTitle", "Shipping to Coating Applicator and Inspection Verification")]
-        [Xunit.TraitAttribute("Description", "Shipping to Coating Applicator and Inspection Verification")]
+        [Xunit.SkippableTheoryAttribute(DisplayName="5. Ship to Coating Applicator Inspection")]
+        [Xunit.TraitAttribute("FeatureTitle", "5. Ship to Coating Applicator Inspection")]
+        [Xunit.TraitAttribute("Description", "5. Ship to Coating Applicator Inspection")]
         [Xunit.TraitAttribute("Category", "TestCaseKey=PSP-T32")]
-        [Xunit.InlineDataAttribute("MNST-GALV-GUST-604-1", "In Transit", "Shipped to Coating Applicator", "Pending", "Passed", new string[0])]
-        public void ShippingToCoatingApplicatorAndInspectionVerification(string bolNumber, string rubiconStatus, string heroStatus, string qcStatus, string shippingStatus, string[] exampleTags)
+        [Xunit.InlineDataAttribute("MNST-GALV-GUST-651-1", "19445983", new string[0])]
+        public void _5_ShipToCoatingApplicatorInspection(string bolNumber, string lrbNumber, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "TestCaseKey=PSP-T32"};
@@ -123,12 +123,9 @@ namespace CreateBolFlow.Features.Hero
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("bolNumber", bolNumber);
-            argumentsOfScenario.Add("rubiconStatus", rubiconStatus);
-            argumentsOfScenario.Add("heroStatus", heroStatus);
-            argumentsOfScenario.Add("qcStatus", qcStatus);
-            argumentsOfScenario.Add("shippingStatus", shippingStatus);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Shipping to Coating Applicator and Inspection Verification", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 14
+            argumentsOfScenario.Add("lrbNumber", lrbNumber);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("5. Ship to Coating Applicator Inspection", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 13
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -141,35 +138,26 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-#line 16
+#line 15
     testRunner.When(string.Format("the user enters \"{0}\" into the search field", bolNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 17
-    testRunner.When("the user clicks in the Select button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
+    testRunner.And("the user clicks in the Select button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 18
+#line 17
     testRunner.And("the user clicks in the button \"Ship to Coating Applicator\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 19
-    testRunner.And("the user enters a valid LRB number \"19446445\" and adds it to the BOL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 18
+    testRunner.And(string.Format("the user enters a valid LRB number \"{0}\" and adds it to the BOL", lrbNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 20
+#line 19
     testRunner.And("the user attaches image files for inspection", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 21
+#line 20
     testRunner.And("the user clicks on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 22
-    testRunner.Then(string.Format("the Rubicon status should be \"{0}\"", rubiconStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 23
-    testRunner.And(string.Format("the Hero Status should be \"{0}\"", heroStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 24
-    testRunner.And(string.Format("the QC Inspection status should be \"{0}\"", qcStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 25
-    testRunner.And(string.Format("the Shipping Inspection status should be \"{0}\"", shippingStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 21
+    testRunner.Then("message \"Pre-Departure Inspection was marked as Passed\" is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -182,12 +170,12 @@ this.FeatureBackground();
             
             public FixtureData()
             {
-                ShippingToCoatingApplicatorAndInspectionVerificationFeature.FeatureSetup();
+                _5_ShipToCoatingApplicatorInspectionFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                ShippingToCoatingApplicatorAndInspectionVerificationFeature.FeatureTearDown();
+                _5_ShipToCoatingApplicatorInspectionFeature.FeatureTearDown();
             }
         }
     }

@@ -23,7 +23,7 @@ public class WebDriverFixture
 
         Driver = new ChromeDriver();
         Driver.Manage().Window.Maximize();
-        Wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(2));
+        Wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
     }
 
     public void Dispose()

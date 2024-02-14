@@ -19,7 +19,7 @@ namespace CreateBolFlow.Features.Hero
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class LoginToHeroSystemValidCredentialFeature : object, Xunit.IClassFixture<LoginToHeroSystemValidCredentialFeature.FixtureData>, System.IDisposable
+    public partial class _1_LoginToHeroSystemValidCredentialFeature : object, Xunit.IClassFixture<_1_LoginToHeroSystemValidCredentialFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace CreateBolFlow.Features.Hero
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "Login.feature"
+#line 1 "1.Login.feature"
 #line hidden
         
-        public LoginToHeroSystemValidCredentialFeature(LoginToHeroSystemValidCredentialFeature.FixtureData fixtureData, CreateBolFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public _1_LoginToHeroSystemValidCredentialFeature(_1_LoginToHeroSystemValidCredentialFeature.FixtureData fixtureData, CreateBolFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace CreateBolFlow.Features.Hero
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Hero", "Login to Hero System valid credential", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Hero", "1. Login to Hero System valid credential", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,16 +80,24 @@ namespace CreateBolFlow.Features.Hero
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Successful Login with Valid Credentials")]
-        [Xunit.TraitAttribute("FeatureTitle", "Login to Hero System valid credential")]
-        [Xunit.TraitAttribute("Description", "Successful Login with Valid Credentials")]
+        [Xunit.SkippableTheoryAttribute(DisplayName="1. Login with Valid Credentials")]
+        [Xunit.TraitAttribute("FeatureTitle", "1. Login to Hero System valid credential")]
+        [Xunit.TraitAttribute("Description", "1. Login with Valid Credentials")]
         [Xunit.TraitAttribute("Category", "TestCaseKey=PSP-T27")]
-        public void SuccessfulLoginWithValidCredentials()
+        [Xunit.InlineDataAttribute("psouza", "Wtec123", new string[0])]
+        public void _1_LoginWithValidCredentials(string username, string password, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "TestCaseKey=PSP-T27"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Successful Login with Valid Credentials", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            argumentsOfScenario.Add("username", username);
+            argumentsOfScenario.Add("password", password);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1. Login with Valid Credentials", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 4
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -104,8 +112,7 @@ namespace CreateBolFlow.Features.Hero
     testRunner.Given("the user is on the Hero login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 6
-    testRunner.When("the user fills the username field with \'psouza\' and the password field with \'Wtec" +
-                        "123!\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When(string.Format("the user fills the username field with \'{0}\' and the password field with \'{1}!\'", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 7
     testRunner.And("the user clicks the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -124,12 +131,12 @@ namespace CreateBolFlow.Features.Hero
             
             public FixtureData()
             {
-                LoginToHeroSystemValidCredentialFeature.FeatureSetup();
+                _1_LoginToHeroSystemValidCredentialFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                LoginToHeroSystemValidCredentialFeature.FeatureTearDown();
+                _1_LoginToHeroSystemValidCredentialFeature.FeatureTearDown();
             }
         }
     }

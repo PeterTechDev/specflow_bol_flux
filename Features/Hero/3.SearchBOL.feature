@@ -1,4 +1,4 @@
-﻿Feature: Search for a Specific BOL in the List
+﻿Feature:3. Search for a Specific BOL in the List
 
 Background:
     Given the user is logged into Hero with username 'psouza' and password 'Wtec123!'
@@ -10,7 +10,7 @@ Background:
     Then the BOL list page is displayed
 
 @TestCaseKey=PSP-T30
-Scenario: Search for a Specific BOL in the List
+Scenario:3. Search for a Specific BOL in the List
         
     When the user enters "<bolNumber>" into the search field
     Then "<bolNumber>" should be displayed in the search results

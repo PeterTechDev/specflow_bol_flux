@@ -23,4 +23,4 @@
 
         Examples:
         | BOLCode               |
-        | MNST-GALV-GUST-641-1  |
+        | MNST-GALV-GUST-652-1  |

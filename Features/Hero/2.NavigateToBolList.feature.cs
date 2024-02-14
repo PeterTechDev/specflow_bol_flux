@@ -19,7 +19,7 @@ namespace CreateBolFlow.Features.Hero
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class NavigateToBOLListInHeroSystemFeature : object, Xunit.IClassFixture<NavigateToBOLListInHeroSystemFeature.FixtureData>, System.IDisposable
+    public partial class _2_NavigateToBOLListInHeroSystemFeature : object, Xunit.IClassFixture<_2_NavigateToBOLListInHeroSystemFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace CreateBolFlow.Features.Hero
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "NavigateToBolList.feature"
+#line 1 "2.NavigateToBolList.feature"
 #line hidden
         
-        public NavigateToBOLListInHeroSystemFeature(NavigateToBOLListInHeroSystemFeature.FixtureData fixtureData, CreateBolFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public _2_NavigateToBOLListInHeroSystemFeature(_2_NavigateToBOLListInHeroSystemFeature.FixtureData fixtureData, CreateBolFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace CreateBolFlow.Features.Hero
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Hero", "Navigate to BOL List in Hero System", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Hero", "2. Navigate to BOL List in Hero System", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,25 +75,44 @@ namespace CreateBolFlow.Features.Hero
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 3
+#line hidden
+#line 4
+    testRunner.Given("the user is on the Hero login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 5
+    testRunner.When("the user fills the username field with \'psouza\' and the password field with \'Wtec" +
+                    "123!\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 6
+    testRunner.And("the user clicks the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 7
+    testRunner.Then("the user should be redirected to the Hero Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+        }
+        
         void System.IDisposable.Dispose()
         {
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Navigate to BOL List in Hero System")]
-        [Xunit.TraitAttribute("FeatureTitle", "Navigate to BOL List in Hero System")]
-        [Xunit.TraitAttribute("Description", "Navigate to BOL List in Hero System")]
+        [Xunit.SkippableFactAttribute(DisplayName="2. Navigate to BOL List page in Hero System")]
+        [Xunit.TraitAttribute("FeatureTitle", "2. Navigate to BOL List in Hero System")]
+        [Xunit.TraitAttribute("Description", "2. Navigate to BOL List page in Hero System")]
         [Xunit.TraitAttribute("Category", "TestCaseKey=PSP-T28")]
         [Xunit.TraitAttribute("Category", "NavigateToBOLsList")]
-        public void NavigateToBOLListInHeroSystem()
+        public void _2_NavigateToBOLListPageInHeroSystem()
         {
             string[] tagsOfScenario = new string[] {
                     "TestCaseKey=PSP-T28",
                     "NavigateToBOLsList"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Navigate to BOL List in Hero System", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 5
-    this.ScenarioInitialize(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2. Navigate to BOL List page in Hero System", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 10
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -102,23 +121,23 @@ namespace CreateBolFlow.Features.Hero
             else
             {
                 this.ScenarioStart();
-#line 6
-        testRunner.Given("the user is logged into Hero with username \'psouza\' and password \'Wtec123!\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 3
+this.FeatureBackground();
 #line hidden
-#line 7
-        testRunner.When("the user clicks on the main menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
+    testRunner.When("the user clicks on the main menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 8
-        testRunner.And("the user selects the \'WTEC\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+    testRunner.And("the user selects the \'WTEC\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 9
-        testRunner.And("the user clicks on the \'Steel\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+    testRunner.And("the user clicks on the \'Steel\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 10
-        testRunner.And("the user navigates through \'Manufacturing\', \'Bill of Lading\', to \'List\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+    testRunner.And("the user navigates through \'Manufacturing\', \'Bill of Lading\', to \'List\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 11
-        testRunner.Then("the BOL list page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 16
+    testRunner.Then("the BOL list page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -131,12 +150,12 @@ namespace CreateBolFlow.Features.Hero
             
             public FixtureData()
             {
-                NavigateToBOLListInHeroSystemFeature.FeatureSetup();
+                _2_NavigateToBOLListInHeroSystemFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                NavigateToBOLListInHeroSystemFeature.FeatureTearDown();
+                _2_NavigateToBOLListInHeroSystemFeature.FeatureTearDown();
             }
         }
     }

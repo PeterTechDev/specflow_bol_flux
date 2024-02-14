@@ -19,7 +19,7 @@ namespace CreateBolFlow.Features.Hero
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class SearchForASpecificBOLInTheListFeature : object, Xunit.IClassFixture<SearchForASpecificBOLInTheListFeature.FixtureData>, System.IDisposable
+    public partial class _3_SearchForASpecificBOLInTheListFeature : object, Xunit.IClassFixture<_3_SearchForASpecificBOLInTheListFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace CreateBolFlow.Features.Hero
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "SearchBOL.feature"
+#line 1 "3.SearchBOL.feature"
 #line hidden
         
-        public SearchForASpecificBOLInTheListFeature(SearchForASpecificBOLInTheListFeature.FixtureData fixtureData, CreateBolFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public _3_SearchForASpecificBOLInTheListFeature(_3_SearchForASpecificBOLInTheListFeature.FixtureData fixtureData, CreateBolFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace CreateBolFlow.Features.Hero
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Hero", "Search for a Specific BOL in the List", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Hero", "3. Search for a Specific BOL in the List", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -107,12 +107,12 @@ namespace CreateBolFlow.Features.Hero
             this.TestTearDown();
         }
         
-        [Xunit.SkippableTheoryAttribute(DisplayName="Search for a Specific BOL in the List")]
-        [Xunit.TraitAttribute("FeatureTitle", "Search for a Specific BOL in the List")]
-        [Xunit.TraitAttribute("Description", "Search for a Specific BOL in the List")]
+        [Xunit.SkippableTheoryAttribute(DisplayName="3. Search for a Specific BOL in the List")]
+        [Xunit.TraitAttribute("FeatureTitle", "3. Search for a Specific BOL in the List")]
+        [Xunit.TraitAttribute("Description", "3. Search for a Specific BOL in the List")]
         [Xunit.TraitAttribute("Category", "TestCaseKey=PSP-T30")]
         [Xunit.InlineDataAttribute("MNST-GALV-GUST-639-1", new string[0])]
-        public void SearchForASpecificBOLInTheList(string bolNumber, string[] exampleTags)
+        public void _3_SearchForASpecificBOLInTheList(string bolNumber, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "TestCaseKey=PSP-T30"};
@@ -123,7 +123,7 @@ namespace CreateBolFlow.Features.Hero
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("bolNumber", bolNumber);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for a Specific BOL in the List", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3. Search for a Specific BOL in the List", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 13
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -154,12 +154,12 @@ this.FeatureBackground();
             
             public FixtureData()
             {
-                SearchForASpecificBOLInTheListFeature.FeatureSetup();
+                _3_SearchForASpecificBOLInTheListFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                SearchForASpecificBOLInTheListFeature.FeatureTearDown();
+                _3_SearchForASpecificBOLInTheListFeature.FeatureTearDown();
             }
         }
     }

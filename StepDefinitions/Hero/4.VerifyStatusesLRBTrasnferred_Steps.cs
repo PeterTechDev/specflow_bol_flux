@@ -37,7 +37,7 @@ namespace CreateBolFlow.StepDefinitions.Hero
         [Then(@"the Hero Status should be ""([^""]*)""")]
         public void ThenTheHeroStatusShouldBe(string heroExpectedStatus)
         {
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
             IWebElement heroStatus = wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#hero-next-datagrid > div > div.dx-datagrid-rowsview.dx-datagrid-nowrap.dx-last-row-border.dx-scrollable.dx-visibility-change-handler.dx-scrollable-both.dx-scrollable-simulated > div > div > div.dx-scrollable-content > div > table > tbody > tr.dx-row.dx-data-row.dx-row-lines.dx-column-lines > td:nth-child(6)")));
             Assert.Equal(heroExpectedStatus, heroStatus.Text);
         }
@@ -45,7 +45,7 @@ namespace CreateBolFlow.StepDefinitions.Hero
         [Then(@"the QC Inspection status should be ""([^""]*)""")]
         public void ThenTheQCInspectionStatusShouldBe(string qcExpectedStatus)
         {
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
             IWebElement qcStatus = wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#hero-next-datagrid > div > div.dx-datagrid-rowsview.dx-datagrid-nowrap.dx-last-row-border.dx-scrollable.dx-visibility-change-handler.dx-scrollable-both.dx-scrollable-simulated > div > div > div.dx-scrollable-content > div > table > tbody > tr.dx-row.dx-data-row.dx-row-lines.dx-column-lines > td:nth-child(10)")));
             Assert.Equal(qcExpectedStatus, qcStatus.Text);
         }
@@ -53,7 +53,7 @@ namespace CreateBolFlow.StepDefinitions.Hero
         [Then(@"the Shipping Inspection status should be ""([^""]*)""")]
         public void ThenTheShippingInspectionStatusShouldBe(string shippingExpectedStatus)
         {
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
             IWebElement shippingStatus = wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#hero-next-datagrid > div > div.dx-datagrid-rowsview.dx-datagrid-nowrap.dx-last-row-border.dx-scrollable.dx-visibility-change-handler.dx-scrollable-both.dx-scrollable-simulated > div > div > div.dx-scrollable-content > div > table > tbody > tr.dx-row.dx-data-row.dx-row-lines.dx-column-lines > td:nth-child(12)")));
             Assert.Equal(shippingExpectedStatus, shippingStatus.Text);
         }

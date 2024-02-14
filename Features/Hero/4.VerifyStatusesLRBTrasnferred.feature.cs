@@ -19,7 +19,7 @@ namespace CreateBolFlow.Features.Hero
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class VerifyStatusesBeforeActionFeature : object, Xunit.IClassFixture<VerifyStatusesBeforeActionFeature.FixtureData>, System.IDisposable
+    public partial class _4_VerifyStatusesBeforeActionFeature : object, Xunit.IClassFixture<_4_VerifyStatusesBeforeActionFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace CreateBolFlow.Features.Hero
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "VerifyStatusesBeforeAction.feature"
+#line 1 "4.VerifyStatusesLRBTrasnferred.feature"
 #line hidden
         
-        public VerifyStatusesBeforeActionFeature(VerifyStatusesBeforeActionFeature.FixtureData fixtureData, CreateBolFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public _4_VerifyStatusesBeforeActionFeature(_4_VerifyStatusesBeforeActionFeature.FixtureData fixtureData, CreateBolFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace CreateBolFlow.Features.Hero
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Hero", "Verify Statuses Before Action", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Hero", "4. Verify Statuses Before Action", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -78,27 +78,27 @@ namespace CreateBolFlow.Features.Hero
         public virtual void FeatureBackground()
         {
 #line 3
-#line hidden
+    #line hidden
 #line 4
-    testRunner.Given("the user is logged into Hero with username \'psouza\' and password \'Wtec123!\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+        testRunner.Given("the user is logged into Hero with username \'psouza\' and password \'Wtec123!\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 5
-    testRunner.And("the user is on the Hero home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("the user is on the Hero home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 6
-    testRunner.When("the user clicks on the main menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.When("the user clicks on the main menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 7
-    testRunner.And("the user selects the \'WTEC\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("the user selects the \'WTEC\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 8
-    testRunner.And("the user clicks on the \'Steel\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("the user clicks on the \'Steel\' option", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 9
-    testRunner.And("the user navigates through \'Manufacturing\', \'Bill of Lading\', to \'List\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("the user navigates through \'Manufacturing\', \'Bill of Lading\', to \'List\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
-    testRunner.Then("the BOL list page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.Then("the BOL list page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
         }
         
@@ -107,12 +107,12 @@ namespace CreateBolFlow.Features.Hero
             this.TestTearDown();
         }
         
-        [Xunit.SkippableTheoryAttribute(DisplayName="Verify Statuses Before Action")]
-        [Xunit.TraitAttribute("FeatureTitle", "Verify Statuses Before Action")]
-        [Xunit.TraitAttribute("Description", "Verify Statuses Before Action")]
+        [Xunit.SkippableTheoryAttribute(DisplayName="4. Verify Statuses - BOL after LRBs transfered")]
+        [Xunit.TraitAttribute("FeatureTitle", "4. Verify Statuses Before Action")]
+        [Xunit.TraitAttribute("Description", "4. Verify Statuses - BOL after LRBs transfered")]
         [Xunit.TraitAttribute("Category", "TestCaseKey=PSP-T31")]
-        [Xunit.InlineDataAttribute("MNST-GALV-GUST-604-1", "In Transit", "LRBs Assigned", "Pending", "Pending", new string[0])]
-        public void VerifyStatusesBeforeAction(string bolNumber, string rubiconStatus, string heroStatus, string qcStatus, string shippingStatus, string[] exampleTags)
+        [Xunit.InlineDataAttribute("MNST-GALV-GUST-648-1", "In Transit", "LRBs Assigned", "Pending", "Pending", new string[0])]
+        public void _4_VerifyStatuses_BOLAfterLRBsTransfered(string bolNumber, string rubiconStatus, string heroStatus, string qcStatus, string shippingStatus, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "TestCaseKey=PSP-T31"};
@@ -127,9 +127,9 @@ namespace CreateBolFlow.Features.Hero
             argumentsOfScenario.Add("heroStatus", heroStatus);
             argumentsOfScenario.Add("qcStatus", qcStatus);
             argumentsOfScenario.Add("shippingStatus", shippingStatus);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify Statuses Before Action", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 14
-this.ScenarioInitialize(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("4. Verify Statuses - BOL after LRBs transfered", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 13
+    this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -139,25 +139,25 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 3
-this.FeatureBackground();
+    this.FeatureBackground();
+#line hidden
+#line 15
+        testRunner.When(string.Format("the user enters \"{0}\" into the search field", bolNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 16
-    testRunner.When(string.Format("the user enters \"{0}\" into the search field", bolNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.Then(string.Format("\"{0}\" should be displayed in the search results", bolNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 17
-    testRunner.Then(string.Format("\"{0}\" should be displayed in the search results", bolNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.Then(string.Format("the Rubicon status should be \"{0}\"", rubiconStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 18
-    testRunner.Then(string.Format("the Rubicon status should be \"{0}\"", rubiconStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.And(string.Format("the Hero Status should be \"{0}\"", heroStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
-    testRunner.And(string.Format("the Hero Status should be \"{0}\"", heroStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And(string.Format("the QC Inspection status should be \"{0}\"", qcStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
-    testRunner.And(string.Format("the QC Inspection status should be \"{0}\"", qcStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 21
-    testRunner.And(string.Format("the Shipping Inspection status should be \"{0}\"", shippingStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And(string.Format("the Shipping Inspection status should be \"{0}\"", shippingStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -170,12 +170,12 @@ this.FeatureBackground();
             
             public FixtureData()
             {
-                VerifyStatusesBeforeActionFeature.FeatureSetup();
+                _4_VerifyStatusesBeforeActionFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                VerifyStatusesBeforeActionFeature.FeatureTearDown();
+                _4_VerifyStatusesBeforeActionFeature.FeatureTearDown();
             }
         }
     }
