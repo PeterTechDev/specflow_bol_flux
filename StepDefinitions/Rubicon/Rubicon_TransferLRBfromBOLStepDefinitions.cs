@@ -10,6 +10,8 @@ using TechTalk.SpecFlow.CommonModels;
 using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;
 using System.Reflection.Emit;
 
+
+
 namespace CreateBolFlow.StepDefinitions.Rubicon
 {
     [Binding]
@@ -23,6 +25,7 @@ namespace CreateBolFlow.StepDefinitions.Rubicon
             driver = fixture.Driver;
             wait = fixture.Wait;
         }
+
 
         [When(@"the user fills in '([^']*)' in the Bill of Lading input")]
         public void WhenTheUserFillsInInTheInput(string bolCode)
@@ -53,8 +56,9 @@ namespace CreateBolFlow.StepDefinitions.Rubicon
         {
             bool statusMatch = false;
             int attempts = 0;
+            string originalTab = driver.CurrentWindowHandle;
 
-            while (!statusMatch && attempts < 10)
+            while (!statusMatch && attempts < 20) //20*15sec == 5 minutes
             {
                 var heroSyncedStatusDt = driver.FindElement(By.XPath($"//dt[contains(text(), '{heroSyncStatus}')]"));
                 var heroSyncedStatusDd = heroSyncedStatusDt.FindElement(By.XPath("following-sibling::dd"));
@@ -67,8 +71,17 @@ namespace CreateBolFlow.StepDefinitions.Rubicon
                 }
                 else
                 {
-                    // wait for 30 seconds and refresh the page
-                    Thread.Sleep(30000);
+                    Thread.Sleep(2000);
+                    ((IJavaScriptExecutor)driver).ExecuteScript("window.open('http://172.16.20.27:5521/swagger/index.html');");
+                    var newTab = driver.WindowHandles.Last();
+                    driver.SwitchTo().Window(newTab);
+
+                    Thread.Sleep(3000);
+                    driver.Close();
+
+                    driver.SwitchTo().Window(originalTab);
+
+                    Thread.Sleep(10000);
                     driver.Navigate().Refresh();
                     attempts++;
                 }
@@ -78,27 +91,31 @@ namespace CreateBolFlow.StepDefinitions.Rubicon
         }
 
 
-
         [When(@"I click the actions button")]
         public void WhenIClickTheActionsButton()
         {
-            var actionsButton = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//span[text()='Actions']")));
+            var actionsButton = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.
+                XPath("//span[text()='Actions']")));
             actionsButton.Click();
         }
 
         [When(@"I select the '([^']*)' option")]
         public void WhenISelectTheOption(string transferLrbOption)
         {
-            var dropdownOption = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath($"//a[text()='{transferLrbOption}']")));
+            var dropdownOption = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.
+                XPath($"//a[text()='{transferLrbOption}']")));
             dropdownOption.Click();
         }
 
         [When(@"I select option '([^']*)' from the dropdown")]
         public void WhenISelectOptionFromTheDropdown(string purchaseOrderNumber)
         {
-            var purchaseOrderDropdown = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.Id("orderId")));
+            var purchaseOrderDropdown = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.
+                Id("orderId")));
             purchaseOrderDropdown.Click();
-            var correctPurchaseOrderNumber = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath($"//option[text()='{purchaseOrderNumber}']")));
+
+            var correctPurchaseOrderNumber = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.
+                XPath($"//option[text()='{purchaseOrderNumber}']")));
             correctPurchaseOrderNumber.Click();
             Thread.Sleep(1000);
         }
@@ -106,21 +123,24 @@ namespace CreateBolFlow.StepDefinitions.Rubicon
         [When(@"I click on the checkbox to confirm my selection")]
         public void WhenIClickOnTheCheckboxToConfirmMySelection()
         {
-            var checkbox = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.CssSelector("input[type='checkbox']")));
+            var checkbox = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.
+                CssSelector("input[type='checkbox']")));
             checkbox.Click();
         }
 
         [When(@"I click the submit button to complete the LRB transfer")]
         public void WhenIClickTheSubmitButtonToCompleteTheLRBTransfer()
         {
-            var submitButton = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath("//span[text()='Submit']")));
+            var submitButton = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.
+                XPath("//span[text()='Submit']")));
             submitButton.Click();
         }
 
         [Then(@"I am on the BOL page '([^']*)'")]
         public void ThenIAmOnTheBOLPage(string bolCode)
         {
-            var bolCodeTitle = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath($"//div[text()='Coating Applicator Bill Of Lading {bolCode}']")));
+            var bolCodeTitle = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.
+                XPath($"//div[text()='Coating Applicator Bill Of Lading {bolCode}']")));
             Assert.Equal($"Coating Applicator Bill Of Lading {bolCode}", bolCodeTitle.Text);
         }
 

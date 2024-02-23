@@ -32,7 +32,6 @@ public class WebDriverFixture
     }
 }
 
-
 namespace CreateBolFlow.StepDefinitions.Rubicon
 {
     [Binding]
@@ -51,7 +50,6 @@ namespace CreateBolFlow.StepDefinitions.Rubicon
         public void GivenTheRubiconLoginPageIsDisplayed()
         {
             driver.Navigate().GoToUrl("http://rubicon.wtecenergy.com/wtec_test/");
-            wait.Until(d => d.FindElement(By.Name("login")).Displayed);
         }
 
         [When(@"the user enters valid login credentials")]
@@ -60,7 +58,6 @@ namespace CreateBolFlow.StepDefinitions.Rubicon
             var usernameField = driver.FindElement(By.Name("login"));
             var passwordField = driver.FindElement(By.Name("password"));
 
-            // Perform login as administrator
             usernameField.SendKeys("psouza");
             passwordField.SendKeys("Wtec123!");
         }
@@ -78,10 +75,6 @@ namespace CreateBolFlow.StepDefinitions.Rubicon
             wait.Until(d => d.FindElement(By.ClassName("rgl-menu-item")).Displayed);
             var uniqueElement = driver.FindElement(By.ClassName("rgl-menu-item"));
             Assert.NotNull(uniqueElement);
-
-            // driver.Dispose();
-
         }
-
     }
 }

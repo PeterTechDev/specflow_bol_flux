@@ -25,7 +25,7 @@ namespace CreateBolFlow.StepDefinitions.Rubicon
         }
 
 
-        [When(@"the user clicks on the 'Vendor Search' icon")]
+        [When(@"the user clicks on the Vendor Search icon")]
         public void WhenTheUserClicksOnTheVendorSearchIcon()
         {
             var vendorSearchIcon = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.Id("ui-id-6")));

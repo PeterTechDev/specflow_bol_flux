@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\10 - Copy.VerifyStatusesBeforeCoatingCompleted.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\12 - Copy.VerifyStatusesAfterCoatingCompleted.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\14 - Copy.VerifyStatusesAfterSuccessfulQc.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\15 - Copy.CreateCustomerBolRubicon.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\17 - Copy.VerifyStatusesAfterTicketCreation.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\4 - Copy.VerifyStatusesLRBTrasnferred.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\6 - Copy.VerifyStatusesPreDepartureToGalvanizer.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Hero\8 - Copy.VerifyStatusesAfterGAlvanizerReceiving.feature.cs" />
@@ -17,17 +22,22 @@
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\RubiconCreateBOL - Copy.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\RubiconUserAuthentication - Copy.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\RubiconUserLogin - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Rubicon\Rubicon_CreateBOLFromVendorBOL - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Rubicon\Rubicon_PurchaseOrderSearch - Copy.feature.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
     <PackageReference Include="Selenium.Chrome.WebDriver" Version="85.0.0" />
     <PackageReference Include="Selenium.Support" Version="4.17.0" />
     <PackageReference Include="Selenium.WebDriver" Version="4.17.0" />
     <PackageReference Include="SpecFlow" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.Assist.Dynamic" Version="1.4.2" />
     <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
     <PackageReference Include="SpecFlow.xUnit" Version="3.9.74" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.6">
       <PrivateAssets>all</PrivateAssets>
@@ -42,17 +52,35 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Features\Hero\19.VerifyStatusesAfterShipToCustomer.feature.cs">
+      <DependentUpon>19.VerifyStatusesAfterShipToCustomer.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Hero\18.ShipToCustomer.feature.cs">
+      <DependentUpon>18.ShipToCustomer.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Hero\17.VerifyStatusesAfterTicketCreation.feature.cs">
+      <DependentUpon>17.VerifyStatusesAfterTicketCreation.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Hero\14.VerifyStatusesAfterSuccessfulQc.feature.cs">
+      <DependentUpon>14.VerifyStatusesAfterSuccessfulQc.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Hero\13.QcInspection.feature.cs">
+      <DependentUpon>13.QcInspection.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Hero\12.VerifyStatusesAfterCoatingCompleted.feature.cs">
+      <DependentUpon>12.VerifyStatusesAfterCoatingCompleted.feature</DependentUpon>
+    </Compile>
     <Compile Update="Features\Hero\3.ShipBolProcess.feature.cs">
       <DependentUpon>3.ShipBolProcess.feature</DependentUpon>
     </Compile>
-    <Compile Update="Features\Hero\2.NavigateToBolList.feature.cs">
-      <DependentUpon>2.NavigateToBolList.feature</DependentUpon>
+    <Compile Update="Features\Hero\02.NavigateToBolList.feature.cs">
+      <DependentUpon>02.NavigateToBolList.feature</DependentUpon>
     </Compile>
-    <Compile Update="Features\Hero\6.VerifyStatusesPreDepartureToGalvanizer.feature.cs">
-      <DependentUpon>6.VerifyStatusesPreDepartureToGalvanizer.feature</DependentUpon>
+    <Compile Update="Features\Hero\06.VerifyStatusesPreDepartureToGalvanizer.feature.cs">
+      <DependentUpon>06.VerifyStatusesPreDepartureToGalvanizer.feature</DependentUpon>
     </Compile>
-    <Compile Update="Features\Hero\7.GalvanizerReceiving.feature.cs">
-      <DependentUpon>7.GalvanizerReceiving.feature</DependentUpon>
+    <Compile Update="Features\Hero\07.GalvanizerReceiving.feature.cs">
+      <DependentUpon>07.GalvanizerReceiving.feature</DependentUpon>
     </Compile>
     <Compile Update="Features\Hero\10.VerifyStatusesBeforeCoatingCompleted.feature.cs">
       <DependentUpon>10.VerifyStatusesBeforeCoatingCompleted.feature</DependentUpon>
@@ -63,8 +91,14 @@
     <Compile Update="Features\Hero\09.StartCoatingInProgress.feature.cs">
       <DependentUpon>09.StartCoatingInProgress.feature</DependentUpon>
     </Compile>
-    <Compile Update="Features\Hero\8.VerifyStatusesAfterGAlvanizerReceiving.feature.cs">
-      <DependentUpon>8.VerifyStatusesAfterGAlvanizerReceiving.feature</DependentUpon>
+    <Compile Update="Features\Hero\08.VerifyStatusesAfterGAlvanizerReceiving.feature.cs">
+      <DependentUpon>08.VerifyStatusesAfterGAlvanizerReceiving.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Rubicon\Rubicon_CreateTicket.feature.cs">
+      <DependentUpon>Rubicon_CreateTicket.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Rubicon\Rubicon_CreateBOLFromVendorBOL.feature.cs">
+      <DependentUpon>Rubicon_CreateBOLFromVendorBOL.feature</DependentUpon>
     </Compile>
     <Compile Update="Features\Rubicon\Rubicon_TransferLRBfromBOL.feature.cs">
       <DependentUpon>Rubicon_TransferLRBfromBOL.feature</DependentUpon>
@@ -78,25 +112,55 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="StepDefinitions\app.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="StepDefinitions\app.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
     <None Update="xunit.runner.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\Hero\19.VerifyStatusesAfterShipToCustomer.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\18.ShipToCustomer.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\17.VerifyStatusesAfterTicketCreation.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\14.VerifyStatusesAfterSuccessfulQc.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\13.QcInspection.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Hero\12.VerifyStatusesAfterCoatingCompleted.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\Hero\3.ShipBolProcess.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="Features\Hero\2.NavigateToBolList.feature">
+    <SpecFlowFeatureFiles Update="Features\Hero\02.NavigateToBolList.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="Features\Hero\6.VerifyStatusesPreDepartureToGalvanizer.feature">
+    <SpecFlowFeatureFiles Update="Features\Hero\06.VerifyStatusesPreDepartureToGalvanizer.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="Features\Hero\7.GalvanizerReceiving.feature">
+    <SpecFlowFeatureFiles Update="Features\Hero\07.GalvanizerReceiving.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
@@ -112,19 +176,27 @@
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="Features\Hero\8.VerifyStatusesAfterGAlvanizerReceiving.feature">
+    <SpecFlowFeatureFiles Update="Features\Hero\08.VerifyStatusesAfterGAlvanizerReceiving.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="Features\Hero\5.ShipToCoatApplicatorInspection.feature">
+    <SpecFlowFeatureFiles Update="Features\Hero\05.ShipToCoatApplicatorInspection.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="Features\Hero\4.VerifyStatusesLRBTrasnferred.feature">
+    <SpecFlowFeatureFiles Update="Features\Hero\04.VerifyStatusesLRBTrasnferred.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>
-    <SpecFlowFeatureFiles Update="Features\Hero\3.SearchBOL.feature">
+    <SpecFlowFeatureFiles Update="Features\Hero\03.SearchBOL.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Rubicon\Rubicon_CreateTicket.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Rubicon\Rubicon_CreateBOLFromVendorBOL.feature">
       <Visible>$(UsingMicrosoftNETSdk)</Visible>
       <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
     </SpecFlowFeatureFiles>

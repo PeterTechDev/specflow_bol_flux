@@ -90,7 +90,7 @@ namespace CreateBolFlow.Features.Rubicon
                     "TestCaseKey=PSP-T18"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Login to Rubicon", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 3
+#line 4
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -100,16 +100,16 @@ namespace CreateBolFlow.Features.Rubicon
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 6
             testRunner.Given("the Rubicon login page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 6
+#line 7
             testRunner.When("the user enters valid login credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 7
+#line 8
             testRunner.And("the user clicks the Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 8
+#line 9
             testRunner.Then("the Rubicon Home Page is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

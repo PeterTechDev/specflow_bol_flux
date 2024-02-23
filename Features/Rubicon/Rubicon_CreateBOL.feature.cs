@@ -19,14 +19,12 @@ namespace CreateBolFlow.Features.Rubicon
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [Xunit.TraitAttribute("Category", "CreateBOL")]
     public partial class BillOfLadingCreationFromPurchaseOrderDetailsFeature : object, Xunit.IClassFixture<BillOfLadingCreationFromPurchaseOrderDetailsFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private static string[] featureTags = new string[] {
-                "CreateBOL"};
+        private static string[] featureTags = ((string[])(null));
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
@@ -85,10 +83,17 @@ namespace CreateBolFlow.Features.Rubicon
         [Xunit.SkippableTheoryAttribute(DisplayName="Create a Bill of Lading from the Purchase Order \'40539\' details page")]
         [Xunit.TraitAttribute("FeatureTitle", "Bill of Lading Creation from Purchase Order Details")]
         [Xunit.TraitAttribute("Description", "Create a Bill of Lading from the Purchase Order \'40539\' details page")]
+        [Xunit.TraitAttribute("Category", "CreateBOL")]
         [Xunit.InlineDataAttribute("40532", new string[0])]
         public void CreateABillOfLadingFromThePurchaseOrder40539DetailsPage(string purchaseOrderNumber, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "CreateBOL"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("PurchaseOrderNumber", purchaseOrderNumber);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a Bill of Lading from the Purchase Order \'40539\' details page", null, tagsOfScenario, argumentsOfScenario, featureTags);
@@ -112,7 +117,7 @@ namespace CreateBolFlow.Features.Rubicon
     testRunner.And("the user clicks the Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 8
-    testRunner.When("the user clicks on the \'Vendor Search\' icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("the user clicks on the Vendor Search icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 9
     testRunner.And(string.Format("the user fills in \'{0}\' in the \'Purchase Order Number\' input", purchaseOrderNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

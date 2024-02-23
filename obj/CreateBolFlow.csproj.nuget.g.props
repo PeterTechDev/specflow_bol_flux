@@ -27,5 +27,6 @@
     <PkgValidation Condition=" '$(PkgValidation)' == '' ">C:\Users\PSouza\.nuget\packages\validation\2.4.18</PkgValidation>
     <Pkgxunit_analyzers Condition=" '$(Pkgxunit_analyzers)' == '' ">C:\Users\PSouza\.nuget\packages\xunit.analyzers\0.10.0</Pkgxunit_analyzers>
     <PkgBoDi Condition=" '$(PkgBoDi)' == '' ">C:\Users\PSouza\.nuget\packages\bodi\1.5.0</PkgBoDi>
+    <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\PSouza\.nuget\packages\entityframework\6.2.0</PkgEntityFramework>
   </PropertyGroup>
 </Project>

@@ -9,12 +9,12 @@
         And the user navigates through 'Manufacturing', 'Bill of Lading', to 'List'
         Then the BOL list page is displayed
 
-    @TestCaseKey=PSP-T38
+    @TestCaseKey=PSP-T38 @11
     Scenario Outline: 11. Complete Coating
         
         When the user enters "<bolCode>" into the search field
         And the user clicks in the Select button
-        And the user clicks in the button "Coating Completed"
+        Then the user clicks in the button "Coating Completed"
         Then the "<pageTitle>" page for "<bolCode>" is displayed
         And the user enters a valid available pickup date "<pickupDate>"
         And the user fills in the pieces coated number "<piecesCoated>"
@@ -25,4 +25,4 @@
         
           Examples:
 | bolCode              | pageTitle         | pickupDate | successMessage                   | piecesCoated |
-| MNST-GALV-GUST-651-1 | Coating Completed | 02/29/2024 | BOL updated to Coating Completed | 10           |
+| MNST-GALV-GUST-719-1 | Coating Completed | 02/29/2024 | BOL updated to Coating Completed | 10           |

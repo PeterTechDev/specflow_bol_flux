@@ -53,7 +53,8 @@ namespace CreateBolFlow.StepDefinitions.Rubicon
         [Then(@"a message 'BOL successfully created' is displayed")]
         public void ThenAMessageBOLSuccessfullyCreatedIsDisplayed()
         {
-            var successMessage = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.XPath("//span[text()='Bill of lading created successfully']")));
+            var successMessage = wait.Until(SeleniumExtras.WaitHelpers.
+                ExpectedConditions.ElementIsVisible(By.XPath("//span[text()='Bill of lading created successfully']")));
             Assert.Equal("Bill of lading created successfully", successMessage.Text);
         }
     }

@@ -111,11 +111,13 @@ namespace CreateBolFlow.Features.Hero
         [Xunit.TraitAttribute("FeatureTitle", "10. Verify Statuses - Before Coating Completed")]
         [Xunit.TraitAttribute("Description", "10. Verify Statuses - Before Coating Completed")]
         [Xunit.TraitAttribute("Category", "TestCaseKey=PSP-T37")]
-        [Xunit.InlineDataAttribute("MNST-GALV-GUST-651-1", "At Coating Applicator", "Coating in Progress", "Pending", "Passed", new string[0])]
+        [Xunit.TraitAttribute("Category", "10")]
+        [Xunit.InlineDataAttribute("MNST-GALV-GUST-719-1", "At Coating Applicator", "Coating in Progress", "Pending", "Passed", new string[0])]
         public void _10_VerifyStatuses_BeforeCoatingCompleted(string bolNumber, string rubiconStatus, string heroStatus, string qcStatus, string shippingStatus, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "TestCaseKey=PSP-T37"};
+                    "TestCaseKey=PSP-T37",
+                    "10"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));

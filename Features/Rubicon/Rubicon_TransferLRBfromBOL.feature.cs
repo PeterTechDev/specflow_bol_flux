@@ -85,12 +85,14 @@ namespace CreateBolFlow.Features.Rubicon
         [Xunit.TraitAttribute("Description", "Successfully transfer LRB and update BOL status to \'in transit\'")]
         [Xunit.TraitAttribute("Category", "TestCaseKey=PSP-T25")]
         [Xunit.TraitAttribute("Category", "SearchBOLCodeandTransferLRB")]
-        [Xunit.InlineDataAttribute("MNST-GALV-GUST-652-1", new string[0])]
+        [Xunit.TraitAttribute("Category", "TransferLRB")]
+        [Xunit.InlineDataAttribute("MNST-GALV-GUST-724-1", new string[0])]
         public void SuccessfullyTransferLRBAndUpdateBOLStatusToInTransit(string bOLCode, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "TestCaseKey=PSP-T25",
-                    "SearchBOLCodeandTransferLRB"};
+                    "SearchBOLCodeandTransferLRB",
+                    "TransferLRB"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -119,7 +121,7 @@ namespace CreateBolFlow.Features.Rubicon
         testRunner.And("the user clicks the Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 9
-        testRunner.When("the user clicks on the \'Vendor Search\' icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.When("the user clicks on the Vendor Search icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 10
         testRunner.And(string.Format("the user fills in \'{0}\' in the Bill of Lading input", bOLCode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

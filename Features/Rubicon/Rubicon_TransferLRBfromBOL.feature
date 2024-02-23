@@ -1,12 +1,12 @@
 ﻿Feature: Transfer LRB from BOL and Verify Status Change to 'In Transit'
     @TestCaseKey=PSP-T25
 
-    @SearchBOLCodeandTransferLRB
+    @SearchBOLCodeandTransferLRB @TransferLRB
      Scenario: Successfully transfer LRB and update BOL status to 'in transit'
         Given the Rubicon login page is displayed
         When the user enters valid login credentials
         And the user clicks the Login button
-        When the user clicks on the 'Vendor Search' icon
+        When the user clicks on the Vendor Search icon
         And the user fills in '<BOLCode>' in the Bill of Lading input
         Then the Purchase Order '<BOLCode>' details page is displayed
         And the user clicks on the '<BOLCode>' item
@@ -22,5 +22,5 @@
         And The BOL 'Status' should be 'In Transit'
 
         Examples:
-        | BOLCode               |
-        | MNST-GALV-GUST-652-1  |
+| BOLCode               |
+| MNST-GALV-GUST-724-1  |

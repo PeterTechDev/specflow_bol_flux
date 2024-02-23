@@ -10,8 +10,6 @@ using TechTalk.SpecFlow.CommonModels;
 using SeleniumExtras.WaitHelpers;
 using System.Net.NetworkInformation;
 
-
-
 namespace CreateBolFlow.StepDefinitions.Hero
 {
     [Binding]

@@ -111,11 +111,13 @@ namespace CreateBolFlow.Features.Hero
         [Xunit.TraitAttribute("FeatureTitle", "11. Complete Coating")]
         [Xunit.TraitAttribute("Description", "11. Complete Coating")]
         [Xunit.TraitAttribute("Category", "TestCaseKey=PSP-T38")]
-        [Xunit.InlineDataAttribute("MNST-GALV-GUST-651-1", "Coating Completed", "02/29/2024", "BOL successfully saved!", "10", new string[0])]
+        [Xunit.TraitAttribute("Category", "11")]
+        [Xunit.InlineDataAttribute("MNST-GALV-GUST-719-1", "Coating Completed", "02/29/2024", "BOL updated to Coating Completed", "10", new string[0])]
         public void _11_CompleteCoating(string bolCode, string pageTitle, string pickupDate, string successMessage, string piecesCoated, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "TestCaseKey=PSP-T38"};
+                    "TestCaseKey=PSP-T38",
+                    "11"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -148,7 +150,7 @@ namespace CreateBolFlow.Features.Hero
         testRunner.And("the user clicks in the Select button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
-        testRunner.And("the user clicks in the button \"Coating Completed\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.Then("the user clicks in the button \"Coating Completed\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 18
         testRunner.Then(string.Format("the \"{0}\" page for \"{1}\" is displayed", pageTitle, bolCode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

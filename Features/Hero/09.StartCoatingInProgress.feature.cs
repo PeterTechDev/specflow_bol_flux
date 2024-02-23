@@ -19,7 +19,7 @@ namespace CreateBolFlow.Features.Hero
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class _9_StartCoatingInProgressFeature : object, Xunit.IClassFixture<_9_StartCoatingInProgressFeature.FixtureData>, System.IDisposable
+    public partial class _09_StartCoatingInProgressFeature : object, Xunit.IClassFixture<_09_StartCoatingInProgressFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace CreateBolFlow.Features.Hero
 #line 1 "09.StartCoatingInProgress.feature"
 #line hidden
         
-        public _9_StartCoatingInProgressFeature(_9_StartCoatingInProgressFeature.FixtureData fixtureData, CreateBolFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public _09_StartCoatingInProgressFeature(_09_StartCoatingInProgressFeature.FixtureData fixtureData, CreateBolFlow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace CreateBolFlow.Features.Hero
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Hero", "9. Start Coating in progress", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features/Hero", "09. Start Coating in progress", null, ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -108,14 +108,16 @@ namespace CreateBolFlow.Features.Hero
         }
         
         [Xunit.SkippableTheoryAttribute(DisplayName="9. Start Coating in progress")]
-        [Xunit.TraitAttribute("FeatureTitle", "9. Start Coating in progress")]
+        [Xunit.TraitAttribute("FeatureTitle", "09. Start Coating in progress")]
         [Xunit.TraitAttribute("Description", "9. Start Coating in progress")]
         [Xunit.TraitAttribute("Category", "TestCaseKey=PSP-T36")]
-        [Xunit.InlineDataAttribute("MNST-GALV-GUST-600-1", "123", "2/29/2024", "Coating in Progress", "BOL coating in progress", "2/29/2024", new string[0])]
-        public void _9_StartCoatingInProgress(string bolNumber, string internalJobNumber, string completionDate, string pageTitle, string sucessMessage, string pickupDate, string[] exampleTags)
+        [Xunit.TraitAttribute("Category", "9")]
+        [Xunit.InlineDataAttribute("MNST-GALV-GUST-719-1", "123", "2/29/2024", "Coating in Progress", "BOL coating in progress", "2/29/2024", "At Coating Applicator", new string[0])]
+        public void _9_StartCoatingInProgress(string bolNumber, string internalJobNumber, string completionDate, string pageTitle, string sucessMessage, string pickupDate, string rubiconStatus, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "TestCaseKey=PSP-T36"};
+                    "TestCaseKey=PSP-T36",
+                    "9"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -128,6 +130,7 @@ namespace CreateBolFlow.Features.Hero
             argumentsOfScenario.Add("pageTitle", pageTitle);
             argumentsOfScenario.Add("sucessMessage", sucessMessage);
             argumentsOfScenario.Add("pickupDate", pickupDate);
+            argumentsOfScenario.Add("rubiconStatus", rubiconStatus);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("9. Start Coating in progress", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 13
     this.ScenarioInitialize(scenarioInfo);
@@ -146,27 +149,30 @@ namespace CreateBolFlow.Features.Hero
         testRunner.When(string.Format("the user enters \"{0}\" into the search field", bolNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 16
-        testRunner.And("the user clicks in the Select button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.Then(string.Format("the Rubicon status should be \"{0}\"", rubiconStatus), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 17
-        testRunner.And("the user clicks in the button \"coating in progress\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.When("the user clicks in the Select button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 18
-        testRunner.Then(string.Format("the \"{0}\" page for \"{1}\" is displayed", pageTitle, bolNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+        testRunner.Then("the user clicks in the button \"coating in progress\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 19
-        testRunner.And(string.Format("the user fills in a valid Internal job number \"{0}\"", internalJobNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.Then(string.Format("the \"{0}\" page for \"{1}\" is displayed", pageTitle, bolNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 20
-        testRunner.And(string.Format("the user enters a valid estimated coating completion date \"{0}\"", completionDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And(string.Format("the user fills in a valid Internal job number \"{0}\"", internalJobNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 21
-        testRunner.And(string.Format("the user enters a valid estimated pickup date \"{0}\"", pickupDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And(string.Format("the user enters a valid estimated coating completion date \"{0}\"", completionDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 22
-        testRunner.And("the user clicks on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And(string.Format("the user enters a valid estimated pickup date \"{0}\"", pickupDate), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 23
+        testRunner.And("the user clicks on Save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 24
         testRunner.Then(string.Format("the message \"{0}\" is displayed", sucessMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -180,12 +186,12 @@ namespace CreateBolFlow.Features.Hero
             
             public FixtureData()
             {
-                _9_StartCoatingInProgressFeature.FeatureSetup();
+                _09_StartCoatingInProgressFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                _9_StartCoatingInProgressFeature.FeatureTearDown();
+                _09_StartCoatingInProgressFeature.FeatureTearDown();
             }
         }
     }

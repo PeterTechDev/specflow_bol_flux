@@ -9,7 +9,7 @@
         And the user navigates through 'Manufacturing', 'Bill of Lading', to 'List'
         Then the BOL list page is displayed
 
-    @TestCaseKey=PSP-T37
+    @TestCaseKey=PSP-T37 @10
     Scenario Outline: 10. Verify Statuses - Before Coating Completed
         
         When the user enters "<bolNumber>" into the search field
@@ -19,7 +19,6 @@
         And the QC Inspection status should be "<qcStatus>"
         And the Shipping Inspection status should be "<shippingStatus>"
         
-        
-                Examples:
+        Examples:
 | bolNumber            | rubiconStatus         | heroStatus            | qcStatus | shippingStatus |
-| MNST-GALV-GUST-651-1 | At Coating Applicator | Coating in Progress   | Pending  | Passed         |
+| MNST-GALV-GUST-719-1 | At Coating Applicator | Coating in Progress   | Pending  | Passed         |
